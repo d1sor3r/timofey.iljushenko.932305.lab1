@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web lab1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        header, footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            background-color: blue;
+            color: white;
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+            .content h1 {
+                margin-top: 0;
+            }
+
+            .content img.placeholder {
+                float: left;
+                margin-right: 10px;
+                width: 80px;
+                height: 80px;
+                border: 2px solid white;
+                border-radius: 10px;
+            }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+            color: red;
+            text-decoration: none;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+            ul li:nth-child(2) {
+                color: lightgreen;
+            }
+
+        .styles-example {
+            margin-top: 15px;
+        }
+
+            .styles-example i,
+            .styles-example b,
+            .styles-example u,
+            .styles-example s {
+                display: block;
+            }
+
+
+        table {
+            border-collapse: collapse;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        td {
+            border: 1px solid white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .red {
+            background: red;
+        }
+
+
+        .big-vertical {
+            height: 60px; 
+        }
+
+        .big-horizontal {
+            width: 60px; 
+        }
+
+ 
+        .icon {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Hello, Header!
+    </header>
+
+    <div class="content">
+        <h1>Hello, content!</h1>
+        <img src="https://via.placeholder.com/80x80.png?text=Img" alt="placeholder" class="placeholder">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+
+        <a href="http://www.csd.tsu.ru">www.csd.tsu.ru</a>
+
+        <p><span class="highlight">Here</span> <b>is the list:</b></p>
+        <ul>
+            <li>Value 1</li>
+            <li>Value 2</li>
+            <li>Value 3</li>
+        </ul>
+
+        <div class="styles-example">
+            <i>Italic</i>
+            <b>Bold</b>
+            <u>UnderLined</u>
+            <s>Line through</s>
+        </div>
+
+
+        <table>
+            <tr>
+                <td class="green big-vertical">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="big-horizontal">4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="red big-vertical">7</td>
+            </tr>
+        </table>
+
+
+        <img src="images.png" alt="icon" class="icon">
+
+    </div>
+
+    <footer>
+        Hello, Footer!
+    </footer>
+</body>
+</html>
