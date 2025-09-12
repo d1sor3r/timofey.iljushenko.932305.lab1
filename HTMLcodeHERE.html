@@ -1,180 +1,275 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Web lab1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+
+        body {
             background-color: white;
+            /* min-height: 100vh; */
         }
 
-        header, footer {
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: green;
-            color: white;
-            text-align: center;
-            padding: 10px;
+            height: 40px;
+            min-height: 30px;
+            max-height: 40px;
         }
 
-        .content {
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            height: 40px;
+            min-height: 30px;
+            max-height: 40px;
+            width: 100%;
+        }
+
+        main {
             background-color: blue;
-            color: white;
-            width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
+            text-align: center;
+            width: 500px;
+            margin: auto;
+            padding: 20px 20px;
         }
 
-            .content h1 {
-                margin-top: 0;
-            }
+        .h1 {
+            text-align: left;
+            margin-bottom: 15px;
+        }
 
-            .content img.placeholder {
-                float: left;
-                margin-right: 10px;
-                width: 80px;
-                height: 80px;
-                border: 2px solid white;
-                border-radius: 10px;
-            }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 120%;
+        }
+
+        .square {
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            float: left;
+            width: 100px; /* Ширина квадрата */
+            height: 100px; /* Высота квадрата */
+            border: 5px solid white; /* Толщина и стиль границы */
+            background-color: transparent; /* Фоновый цвет */
+        }
+
+        .headerspan {
+            color: white;
+            font-weight: 100;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .footerspan {
+            color: white;
+            font-weight: 100;
+            font-family: Arial, sans-serif;
+        }
 
         a {
-            display: block;
-            text-align: center;
-            margin: 10px 0;
             color: red;
-            text-decoration: none;
+            font-size: 1.3em;
+            font-family: Arial, sans-serif;
         }
 
-        .highlight {
-            color: red;
-            font-weight: bold;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-            ul li:nth-child(2) {
-                color: lightgreen;
-            }
-
-        .styles-example {
+        .csi {
+            margin-bottom: 15px;
             margin-top: 15px;
         }
 
-            .styles-example i,
-            .styles-example b,
-            .styles-example u,
-            .styles-example s {
-                display: block;
-            }
-
-
-        table {
-            border-collapse: collapse;
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
+        .listh {
+            text-align: left;
+            word-spacing: 10px;
         }
 
-        td {
-            border: 1px solid white;
-            text-align: center;
-            width: 30px;
-            height: 30px;
+        .here {
+            color: red;
+        }
+
+        ul > li {
+            text-align: left;
+            margin-left: 35px;
+            font-family: Arial, sans-serif;
             color: white;
         }
 
-        .green {
-            background: green;
+        ul li:nth-child(2) {
+            word-spacing: 3px;
+            color: aquamarine;
         }
 
-        .red {
-            background: red;
+        li {
+            margin-top: 10px;
         }
 
-
-        .big-vertical {
-            height: 60px;
-            width: 30px
+        .list2 {
+            margin-top: 18px;
         }
 
-        .big-horizontal {
-            width: 60px;
-            height: 30px;
+        .style {
+            display: block;
+            text-align: left;
+            line-height: 1.8;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
- 
-        .icon {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 24px;
-            height: 24px;
+        #s4 {
+            visibility: hidden;
+            line-height: 1;
+        }
+
+        #s5 {
+            text-decoration: line-through;
+            line-height: 1;
+        }
+
+        td {
+            width: 45px;
+            height: 32px;
+            border: solid 1px silver;
+            vertical-align: bottom;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border: solid 1px silver;
+            min-width: 45px;
+            max-width: 300px;
+        }
+
+        aside {
+            display: flex;
+            justify-content: right;
+            float: right;
+            margin-top: 18px;
+            flex-direction: column; /* Выстраивает элементы в колонку */
+        }
+
+        .imagef {
+            text-align: right;
+            margin: 10px 0px;
+            clear: both;
+        }
+
+        .section1 {
+            overflow: auto;
         }
     </style>
+
 </head>
+
+
 <body>
     <header>
-        Hello, Header!
+        <nav>
+            <span class="headerspan">Hello, Header!</span>
+        </nav>
     </header>
 
-    <div class="content">
-        <h1>Hello, content!</h1>
-        <img src="sqare.jpg" alt="square pic" class="placeholder">
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+    <main>
+        <section class="section1">
+            <div class="h1">
+                <h1>Hello, content!</h1>
+            </div>
 
+            <div class="square">
+            </div>
 
-        <a href="http://www.csd.tsu.ru"><u>www.csd.tsu.ru</u></a>
+            <div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </section>
 
-        <p><span class="highlight">Here</span> <b>is the list:</b></p>
-        <ul>
-            <li>Value 1</li>
-            <li>Value 2</li>
-            <li>Value 3</li>
-        </ul>
-
-        <div class="styles-example">
-            <i>Italic</i>
-            <b>Bold</b>
-            <u>UnderLined</u>
-            <s>Line through</s>
+        <div class="csi">
+            <a href="https://csi.tsu.ru/" target="_blank"> www.csi.tsu.ru </a>
         </div>
 
+        <section>
+            <div>
+                <h2 class="listh"><span class="here">Here </span>is the list:</h2>
+                <ul>
+                    <li>Value 1</li>
+                    <li class="lispace">V a l u e 2</li>
+                    <li>Value 3</li>
+                </ul>
+            </div>
+        </section>
 
-        <table>
-            <tr>
-                <td class="green big-vertical">1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="big-horizontal">4</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td class="red big-vertical">7</td>
-            </tr>
-        </table>
+        <aside>
+            <table>
+                <tr>
+                    <td rowspan="2" style="background-color:green;">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
 
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
 
-        <img src="images.png" alt="thumb up" class="icon">
+                <tr>
+                    <td>6</td>
+                    <td colspan="2" style="background-color:red;">7</td>
+                </tr>
+            </table>
 
-    </div>
+            <div class="imagef">
+                <a><img src="images.png" alt="like"></a>
+            </div>
+        </aside>
+
+        <section>
+            <div class="list2">
+                <h3>Here are some visual styles:</h3>
+                <span class="style"><i>Italic</i></span>
+                <span class="style"><b>Bold</b></span>
+                <span class="style"><u>UnderLined</u></span>
+                <span class="style" id="s4">NotVisible</span>
+                <span class="style" id="s5">Line through</span>
+            </div>
+        </section>
+    </main>
+
 
     <footer>
-        Hello, Footer!
+
+        <span class="footerspan">Hello, Footer!</span>
+
     </footer>
+
 </body>
+
 </html>
